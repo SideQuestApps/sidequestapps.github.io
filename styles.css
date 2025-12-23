@@ -1,0 +1,89 @@
+ /* Design tokens — tweak these to re-theme the entire site */
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #38bdf8;
+      --border: #1f2933;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Global page styles and background */
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: radial-gradient(circle at top, #111827, #020617);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* Content container — controls readable width and spacing */
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+    }
+
+    header {
+      margin-bottom: 4rem;
+    }
+
+    header h1 {
+      font-size: 2.75rem;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
+
+    header p {
+      max-width: 520px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    section {
+      margin-bottom: 3.5rem;
+    }
+
+    section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    /* Card-style blocks used for projects and skills */
+    section li {
+      background: linear-gradient(
+        180deg,
+        rgba(255,255,255,0.04),
+        rgba(255,255,255,0.01)
+      );
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+    }
