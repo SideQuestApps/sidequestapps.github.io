@@ -8,6 +8,25 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 
+<script>
+  const root = document.documentElement;
+
+  // Load saved theme
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme) {
+    root.setAttribute("data-theme", savedTheme);
+  }
+
+  function toggleTheme() {
+    const current = root.getAttribute("data-theme");
+    const next = current === "light" ? "dark" : "light";
+
+    root.setAttribute("data-theme", next);
+    localStorage.setItem("theme", next);
+  }
+</script>
+
+
 <body>
   <main class="container">
     <!--
@@ -20,6 +39,10 @@
       <p>
         A portfolio of mobile apps and games covering design, development, and release.
       </p>
+
+      <button class="theme-toggle" onclick="toggleTheme()">
+  Toggle theme
+</button>
     </header>
 
     <!--

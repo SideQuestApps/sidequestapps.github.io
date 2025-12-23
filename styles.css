@@ -1,89 +1,140 @@
- /* Design tokens — tweak these to re-theme the entire site */
-    :root {
-      --bg: #0f172a;
-      --card: #111827;
-      --text: #e5e7eb;
-      --muted: #9ca3af;
-      --accent: #38bdf8;
-      --border: #1f2933;
-    }
+/* =========================================================
+   DESIGN TOKENS (THEMES)
+   ========================================================= */
 
-    * {
-      box-sizing: border-box;
-    }
+/* Dark theme (default) */
+:root {
+  --bg: #0f172a;
+  --bg-gradient-start: #111827;
+  --bg-gradient-end: #020617;
+  --card: #111827;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #38bdf8;
+  --border: #1f2933;
+}
 
-    /* Global page styles and background */
-    body {
-      margin: 0;
-      font-family: system-ui, sans-serif;
-      background: radial-gradient(circle at top, #111827, #020617);
-      color: var(--text);
-      line-height: 1.6;
-    }
+/* Light theme */
+[data-theme="light"] {
+  --bg: #f8fafc;
+  --bg-gradient-start: #ffffff;
+  --bg-gradient-end: #f1f5f9;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+  --accent: #0284c7;
+  --border: #e2e8f0;
+}
 
-    /* Content container — controls readable width and spacing */
-    main {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 3rem 1.5rem 5rem;
-    }
+/* =========================================================
+   RESET & BASE
+   ========================================================= */
 
-    header {
-      margin-bottom: 4rem;
-    }
+* {
+  box-sizing: border-box;
+}
 
-    header h1 {
-      font-size: 2.75rem;
-      margin-bottom: 0.75rem;
-      letter-spacing: -0.02em;
-    }
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: radial-gradient(
+    circle at top,
+    var(--bg-gradient-start),
+    var(--bg-gradient-end)
+  );
+  color: var(--text);
+  line-height: 1.6;
+  transition: background 0.3s ease, color 0.3s ease;
+}
 
-    header p {
-      max-width: 520px;
-      color: var(--muted);
-      font-size: 1.05rem;
-    }
+/* =========================================================
+   LAYOUT
+   ========================================================= */
 
-    section {
-      margin-bottom: 3.5rem;
-    }
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+}
 
-    section h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1.25rem;
-    }
+header {
+  margin-bottom: 4rem;
+}
 
-    section ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
+section {
+  margin-bottom: 3.5rem;
+}
 
-    /* Card-style blocks used for projects and skills */
-    section li {
-      background: linear-gradient(
-        180deg,
-        rgba(255,255,255,0.04),
-        rgba(255,255,255,0.01)
-      );
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.25rem 1.5rem;
-      margin-bottom: 1rem;
-    }
+footer {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+}
 
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
+/* =========================================================
+   TYPOGRAPHY
+   ========================================================= */
 
-    a:hover {
-      text-decoration: underline;
-    }
+header h1 {
+  font-size: 2.75rem;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
 
-    footer {
-      margin-top: 4rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-    }
+header p {
+  max-width: 520px;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+/* =========================================================
+   COMPONENTS
+   ========================================================= */
+
+section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+section li {
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.04),
+    rgba(255,255,255,0.01)
+  );
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+  transition: background 0.3s ease, border 0.3s ease;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   UTILITIES
+   ========================================================= */
+
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0.4rem 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
