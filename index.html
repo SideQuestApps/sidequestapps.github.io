@@ -1,0 +1,196 @@
+<!--
+  Minimal Developer Portfolio Template
+  -----------------------------------
+  Purpose:
+  - A clean, no-framework starting point for a developer portfolio
+  - Designed to be copied, edited, and extended over time
+
+  How to use:
+  - Replace text like "Your Name", project titles, and links
+  - Deploy as-is (GitHub Pages, Netlify, Vercel, etc.)
+  - Improve incrementally as your skills grow
+
+  Take it further (when ready):
+  - Add images/screenshots to projects
+  - Introduce a light/dark theme toggle
+  - Add subtle hover animations or transitions
+  - Split CSS into a separate file
+  - Add JavaScript only when it solves a real need
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SideQuest Apps by Avineet</title>
+
+  <style>
+    /* Design tokens — tweak these to re-theme the entire site */
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #38bdf8;
+      --border: #1f2933;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Global page styles and background */
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: radial-gradient(circle at top, #111827, #020617);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* Content container — controls readable width and spacing */
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+    }
+
+    header {
+      margin-bottom: 4rem;
+    }
+
+    header h1 {
+      font-size: 2.75rem;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
+
+    header p {
+      max-width: 520px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    section {
+      margin-bottom: 3.5rem;
+    }
+
+    section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    /* Card-style blocks used for projects and skills */
+    section li {
+      background: linear-gradient(
+        180deg,
+        rgba(255,255,255,0.04),
+        rgba(255,255,255,0.01)
+      );
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <!--
+      HERO / INTRO
+      Make it instantly clear who you are and what you do.
+      This is the first thing most visitors read.
+    -->
+    <header>
+      <h1>SideQuest Apps</h1>
+      <p>
+        A portfolio of mobile apps and games covering design, development, and release.
+      </p>
+    </header>
+
+    <!--
+      PROJECTS
+      Show only your best work.
+      2–4 strong projects beats a long list every time.
+    -->
+    <section class="projects">
+      <h2>Apps</h2>
+      <ul>
+        <li>
+          <strong>Brain Sprint: Fun Mind Games</strong> – BrainSprint is your go-to app for fun, fast, and effective brain training.
+          <br />
+          <a href="#">Live</a> · <a href="#">Source</a>
+        </li>
+        <li>
+          <strong>One Tap Reflex Games: DashTap</strong> – DashTap Mania is a reflex game designed around one simple idea: speed decides everything.
+          <br />
+          <a href="#">Live</a> · <a href="#">Source</a>
+        </li>
+        <li>
+          <strong>Focus Portal - My Focus Flight</strong> – Stay focused with Focus Portal - a focus parent portal and timer for kids. Power up focus flight sessions using a Pomodoro: focus timer built for daily routines.
+          <br />
+          <a href="#">Live</a> · <a href="#">Source</a>
+        </li>
+      </ul>
+    </section>
+
+    <!--
+      SKILLS
+      List technologies you are comfortable discussing.
+      Avoid fake "skill percentages".
+    -->
+    <section class="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>Swift</li>
+        <li>Objective-C</li>
+        <li>SwiftUI</li>
+        <li>UIKit</li>
+        <li>CoreData</li>
+        <li>AVFoundation</li>
+        <li>HealthKit</li>
+        <li>XCFrameworks</li>
+      </ul>
+    </section>
+
+    <!--
+      CONTACT
+      Make it easy for someone to reach you.
+      This is the most important section for opportunities.
+    -->
+    <footer>
+      <p>
+        Interested in working together?
+        <br />
+        Email: <a href="mailto:avineetgupta@gmail.com">avineetgupta@gmail.com</a>
+        <br />
+        GitHub: <a href="https://github.com/avineetgupta">github.com/avineetgupta</a>
+        · LinkedIn: <a href="https://linkedin.com/in/avineetgupta">linkedin.com/in/avineetgupta</a>
+      </p>
+    </footer>
+  </main>
+</body>
+</html>
