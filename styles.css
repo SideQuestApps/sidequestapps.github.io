@@ -129,12 +129,43 @@ a:hover {
    UTILITIES
    ========================================================= */
 
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
 .theme-toggle {
   background: none;
   border: 1px solid var(--border);
   color: var(--text);
-  padding: 0.4rem 0.75rem;
-  border-radius: 8px;
+  padding: 0.45rem 0.6rem;
+  border-radius: 10px;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: background 0.2s ease, border 0.2s ease;
 }
+
+.theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* Icon visibility */
+.icon-sun,
+.icon-moon {
+  display: none;
+}
+
+/* Show correct icon */
+[data-theme="dark"] .icon-sun {
+  display: inline;
+}
+
+[data-theme="light"] .icon-moon {
+  display: inline;
+}
+

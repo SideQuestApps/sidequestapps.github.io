@@ -10,21 +10,39 @@
 
 <script>
   const root = document.documentElement;
+  const storageKey = "theme";
 
-  // Load saved theme
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme) {
-    root.setAttribute("data-theme", savedTheme);
+  const systemPrefersLight = window.matchMedia("(prefers-color-scheme: light)");
+
+  function applyTheme(theme) {
+    root.setAttribute("data-theme", theme);
   }
+
+  // Initial load
+  const savedTheme = localStorage.getItem(storageKey);
+
+  if (savedTheme) {
+    applyTheme(savedTheme);
+  } else {
+    applyTheme(systemPrefersLight.matches ? "light" : "dark");
+  }
+
+  // Listen for system changes ONLY if user hasn’t chosen
+  systemPrefersLight.addEventListener("change", (e) => {
+    if (!localStorage.getItem(storageKey)) {
+      applyTheme(e.matches ? "light" : "dark");
+    }
+  });
 
   function toggleTheme() {
     const current = root.getAttribute("data-theme");
     const next = current === "light" ? "dark" : "light";
 
-    root.setAttribute("data-theme", next);
-    localStorage.setItem("theme", next);
+    applyTheme(next);
+    localStorage.setItem(storageKey, next);
   }
 </script>
+
 
 
 <body>
@@ -34,16 +52,17 @@
       Make it instantly clear who you are and what you do.
       This is the first thing most visitors read.
     -->
-    <header>
-      <h1>SideQuest Apps</h1>
-      <p>
-        A portfolio of mobile apps and games covering design, development, and release.
-      </p>
-
-      <button class="theme-toggle" onclick="toggleTheme()">
-  Toggle theme
-</button>
+    <header class="header">
+      <div class="header-top">
+        <h1>SideQuest Apps</h1>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+          <span class="icon-sun">☀️</span>
+          <span class="icon-moon">🌙</span>
+        </button>
+      </div>
+      <p>A portfolio of mobile apps and games covering design, development, and release.</p>
     </header>
+
 
     <!--
       PROJECTS
