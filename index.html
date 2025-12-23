@@ -43,8 +43,6 @@
   }
 </script>
 
-
-
 <body>
   <main class="container">
     <!--
@@ -55,11 +53,19 @@
     <header class="header">
       <div class="header-top">
         <h1>SideQuest Apps</h1>
-        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
-          <span class="icon-sun">☀️</span>
-          <span class="icon-moon">🌙</span>
-        </button>
+
+        <div class="header-actions">
+          <a href="privacy.html" class="header-link">Privacy</a>
+          <a href="#connect" class="header-link">Connect</a>
+
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+            <span class="icon-sun">☀️</span>
+            <span class="icon-moon">🌙</span>
+          </button>
+
+        </div>
       </div>
+
       <p>A portfolio of mobile apps and games covering design, development, and release.</p>
     </header>
 
@@ -110,7 +116,7 @@
       Make it easy for someone to reach you.
       This is the most important section for opportunities.
     -->
-    <footer>
+    <footer id="connect">
       <p>
         Interested in working together?
         <br />
