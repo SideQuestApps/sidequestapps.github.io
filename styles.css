@@ -133,6 +133,16 @@ a:hover {
    UTILITIES
    ========================================================= */
 
+.site-title a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.site-title a:hover {
+  text-decoration: none;
+}
+
 .header-top {
   display: flex;
   align-items: center;

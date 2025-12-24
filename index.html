@@ -8,40 +8,7 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 
-<script>
-  const root = document.documentElement;
-  const storageKey = "theme";
-
-  const systemPrefersLight = window.matchMedia("(prefers-color-scheme: light)");
-
-  function applyTheme(theme) {
-    root.setAttribute("data-theme", theme);
-  }
-
-  // Initial load
-  const savedTheme = localStorage.getItem(storageKey);
-
-  if (savedTheme) {
-    applyTheme(savedTheme);
-  } else {
-    applyTheme(systemPrefersLight.matches ? "light" : "dark");
-  }
-
-  // Listen for system changes ONLY if user hasn’t chosen
-  systemPrefersLight.addEventListener("change", (e) => {
-    if (!localStorage.getItem(storageKey)) {
-      applyTheme(e.matches ? "light" : "dark");
-    }
-  });
-
-  function toggleTheme() {
-    const current = root.getAttribute("data-theme");
-    const next = current === "light" ? "dark" : "light";
-
-    applyTheme(next);
-    localStorage.setItem(storageKey, next);
-  }
-</script>
+<script src="theme.js" defer></script>
 
 <body>
   <main class="container">
@@ -52,15 +19,16 @@
     -->
     <header class="header">
       <div class="header-top">
-        <h1>SideQuest Apps</h1>
+        <h1 class="site-title">
+          <a href="index.html">SideQuest Apps</a>
+        </h1>
 
         <div class="header-actions">
           <a href="privacy.html" class="header-link">Privacy</a>
           <a href="#connect" class="header-link">Connect</a>
 
-          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
-            <span class="icon-sun">☀️</span>
-            <span class="icon-moon">🌙</span>
+          <button class="icon-button" onclick="toggleTheme()" aria-label="Toggle theme">
+            <span id="theme-icon"></span>
           </button>
 
         </div>
