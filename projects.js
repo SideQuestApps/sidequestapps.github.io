@@ -10,21 +10,21 @@ class ProjectsRenderer {
       description:
         "BrainSprint is your go-to app for fun, fast, and effective brain training.",
       link: "https://apps.apple.com/us/app/id6753343626",
-      icon: "assets/brainsprint_logo.png",
+      icon: "/assets/brainsprint_logo.png",
     },
     {
       name: "One Tap Reflex Games: DashTap",
       description:
         "DashTap Mania is a reflex game designed around one simple idea: speed decides everything.",
       link: "https://apps.apple.com/us/app/id6753695725",
-      icon: "assets/dashtap_logo.png",
+      icon: "/assets/dashtap_logo.png",
     },
     {
       name: "Focus Portal - My Focus Flight",
       description:
         "Stay focused with Focus Portal — a focus parent portal and timer for kids, built around Pomodoro-style focus flight sessions.",
       link: "https://apps.apple.com/us/app/id6756427873",
-      icon: "assets/focusportal_logo.png",
+      icon: "/assets/focusportal_logo.png",
     },
   ];
 
@@ -59,7 +59,7 @@ class ProjectsRenderer {
             class="appstore-link"
           >
             <img 
-              src="assets/appstore-badge.svg"
+              src="/assets/appstore-badge.svg"
               alt="Download on the App Store"
             />
           </a>
