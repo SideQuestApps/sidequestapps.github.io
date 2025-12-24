@@ -9,6 +9,12 @@
 </head>
 
 <script src="theme.js" defer></script>
+<script src="js/projects.js" defer></script>
+<script defer>
+  document.addEventListener("DOMContentLoaded", () => {
+    new ProjectsRenderer("projects-root").render();
+  });
+</script>
 
 <body>
   <main class="container">
@@ -42,26 +48,7 @@
     <!--
       PROJECTS
     -->
-    <section class="projects">
-      <h2>Apps</h2>
-      <ul>
-        <li>
-          <strong>Brain Sprint: Fun Mind Games</strong> – BrainSprint is your go-to app for fun, fast, and effective brain training.
-          <br />
-          <a href="https://apps.apple.com/us/app/id6753343626">App Store</a>
-        </li>
-        <li>
-          <strong>One Tap Reflex Games: DashTap</strong> – DashTap Mania is a reflex game designed around one simple idea: speed decides everything.
-          <br />
-          <a href="https://apps.apple.com/us/app/id6753695725">App Store</a>
-        </li>
-        <li>
-          <strong>Focus Portal - My Focus Flight</strong> – Stay focused with Focus Portal - a focus parent portal and timer for kids. Power up focus flight sessions using a Pomodoro: focus timer built for daily routines.
-          <br />
-          <a href="https://apps.apple.com/us/app/id6756427873">App Store</a>
-        </li>
-      </ul>
-    </section>
+    <div id="projects-root"></div>
 
     <!--
       CONTACT
