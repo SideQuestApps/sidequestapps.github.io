@@ -65,9 +65,9 @@ html {
 
 header {
   margin-bottom: 4rem;
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; */
 }
 
 section {
@@ -145,7 +145,7 @@ a:hover {
 }
 
 .site-logo {
-  height: 128px;
+  height: 256px;
   width: auto;
   display: block;
 }
