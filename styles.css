@@ -4,14 +4,14 @@
 
 /* Dark theme (default) */
 :root {
-  --bg: #0f172a;
-  --bg-gradient-start: #111827;
-  --bg-gradient-end: #020617;
-  --card: #111827;
-  --text: #e5e7eb;
-  --muted: #9ca3af;
-  --accent: #38bdf8;
-  --border: #1f2933;
+  --bg: #151412;
+  --bg-gradient-start: #151412;
+  --bg-gradient-end: #0D0C0B;
+  --card: #151412;
+  --text: #ff4939;
+  --muted: #EB6D5F;
+  --accent: #ff4939;
+  --border: #ff4939;
 }
 
 /* Light theme */
