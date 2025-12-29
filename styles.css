@@ -9,9 +9,10 @@
   --bg-gradient-end: #0D0C0B;
   --card: #151412;
   --text: #ff4939;
-  --muted: #9ca3af;
+  --muted: #ff4939;
   --accent: #ff4939;
   --border: #ff4939;
+  --highlight: #ffffff;
 }
 
 /* Light theme */
@@ -24,6 +25,7 @@
   --muted: #475569;
   --accent: #0284c7;
   --border: #e2e8f0;
+  --highlight: #475569;
 }
 
 /* =========================================================
@@ -73,7 +75,7 @@ footer {
   margin-top: 4rem;
   padding-top: 2rem;
   border-top: 1px solid var(--border);
-  color: var(--muted);
+  color: var(--highlight);
 }
 
 /* =========================================================
