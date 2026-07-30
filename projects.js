@@ -6,6 +6,13 @@ class ProjectsRenderer {
 
   projects = [
     {
+      name: "SportFit: Cricket Training",
+      description:
+        "Train smarter with expert drills for Cricket, Football, Badminton & Volleyball. Build skills, track progress, prepare for matches and perform like a pro.",
+      link: "https://apps.apple.com/us/app/id6794868577",
+      icon: "/assets/sportsfit_logo.png",
+    },
+    {
       name: "Focus Friend: ADHD Focus Timer",
       description:
         "Stay focused with Focus Portal — a focus parent portal and timer for kids, built around Pomodoro-style focus flight sessions.",
