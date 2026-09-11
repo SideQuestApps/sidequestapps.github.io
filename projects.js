@@ -13,9 +13,9 @@ class ProjectsRenderer {
       icon: "/assets/sportsfit_logo.png",
     },
     {
-      name: "Focus Friend: ADHD Focus Timer",
+      name: "ADHD Focus Timer: Pomodoro",
       description:
-        "Stay focused with Focus Portal — a focus parent portal and timer for kids, built around Pomodoro-style focus flight sessions.",
+        "A simple ADHD-friendly focus timer for work, study, reading, and everyday tasks. No complicated productivity system required.",
       link: "https://apps.apple.com/us/app/id6756427873",
       icon: "/assets/focusportal_logo.png",
     },
@@ -27,9 +27,9 @@ class ProjectsRenderer {
       icon: "/assets/dashtap_logo.png",
     },
     {
-      name: "Focus Hero: Mind Games for Fun",
+      name: "BrainSprint: Memory Match, Quick Match, Pattern Puzzle",
       description:
-        "BrainSprint is your go-to app for fun, fast, and effective brain training.",
+        "Challenge yourself with quick puzzles, mind skills games, and logic challenges designed to boost focus, speed, and problem-solving skills.",
       link: "https://apps.apple.com/us/app/id6753343626",
       icon: "/assets/brainsprint_logo.png",
     }
