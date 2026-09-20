@@ -6,6 +6,20 @@ class ProjectsRenderer {
 
   projects = [
     {
+      name: "Pawdoku",
+      description:
+        "Meet Pawdoku, a cozy Sudoku puzzle game made for puzzle lovers and dog lovers. Solve satisfying number puzzles, collect adorable dogs, build your daily streak, and unlock rewards as you play.",
+      link: "https://apps.apple.com/us/app/id6810373279",
+      icon: "/assets/pawdoku_logo.png",
+    },
+    {
+      name: "Workout Planner",
+      description:
+        "Workout Planner: Gym Routine makes it easy to plan your workouts, follow a weekly routine, and stay consistent without feeling overwhelmed.",
+      link: "https://apps.apple.com/us/app/id6801083419",
+      icon: "/assets/workoutplanner_logo.png",
+    },
+    {
       name: "SportFit: Cricket Training",
       description:
         "Train smarter with expert drills for Cricket, Football, Badminton & Volleyball. Build skills, track progress, prepare for matches and perform like a pro.",
@@ -24,14 +38,14 @@ class ProjectsRenderer {
       description:
         "DashTap Mania is a reflex game designed around one simple idea: speed decides everything.",
       link: "https://apps.apple.com/us/app/id6753695725",
-      icon: "/assets/dashtap_logo.png",
+      icon: "/assets/dashtap_2_logo.png",
     },
     {
       name: "BrainSprint: Memory Match, Quick Match, Pattern Puzzle",
       description:
         "Challenge yourself with quick puzzles, mind skills games, and logic challenges designed to boost focus, speed, and problem-solving skills.",
       link: "https://apps.apple.com/us/app/id6753343626",
-      icon: "/assets/brainsprint_logo.png",
+      icon: "/assets/brainsprint_2_logo.png",
     }
   ];
 
