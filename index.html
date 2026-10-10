@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SideQuest Apps by Avineet</title>
+  <meta
+    name="description"
+    content="A portfolio of mobile apps and games covering design, development, and release."
+  />
 
   <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
@@ -15,74 +20,167 @@
 
   <!-- Android / PWA -->
   <link rel="manifest" href="/assets/favicon/site.webmanifest">
-  <meta name="theme-color" content="#0f172a">
-  
+  <meta name="theme-color" content="#0a0a0c">
+
+  <!-- Type -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+  >
+
   <link rel="stylesheet" href="/styles.css" />
+
+  <script src="/theme.js" defer></script>
+  <script src="/projects.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      new SiteRenderer().render();
+    });
+  </script>
 </head>
 
-<script src="/theme.js" defer></script>
-<script src="/projects.js" defer></script>
-<script defer>
-  document.addEventListener("DOMContentLoaded", () => {
-    new ProjectsRenderer("projects-root").render();
-  });
-</script>
-
 <body>
-  <main class="container">
-    <!--
-      HERO / INTRO
-      Make it instantly clear who you are and what you do.
-      This is the first thing most visitors read.
-    -->
-    <header class="header">
-      <div class="header-top">
-        <h1 class="site-title">
-          <a href="/" aria-label="SideQuest Apps">
-            <img
-              src="/assets/SideQuest_logo_full.png"
-              alt="SideQuest Apps"
-              class="site-logo"
-            />
-          </a>
-        </h1>
+  <!--
+    BACKDROP
+    The colour fields and grid that the glass panels blur.
+    Fixed, so panels keep something to refract while the page scrolls.
+  -->
+  <div class="backdrop" aria-hidden="true">
+    <span class="field field-1"></span>
+    <span class="field field-2"></span>
+    <span class="field field-3"></span>
+    <span class="grid-overlay"></span>
+  </div>
 
-        <div class="header-actions">
-          <a href="privacy.html" class="header-link">Privacy</a>
-          <a href="#connect" class="header-link">Connect</a>
+  <div class="shell">
 
-          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+    <!-- NAV -->
+    <header class="site-header" id="top">
+      <nav class="nav glass">
+        <a href="/" aria-label="SideQuest Apps home">
+          <img src="/assets/SideQuest_logo_full_bold.png" alt="SideQuest Apps" class="site-logo" />
+        </a>
+
+        <div class="nav-links">
+          <a href="#apps" class="nav-link">Apps</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <a href="/privacy.html" class="nav-link">Privacy</a>
+
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle colour theme">
             <span class="icon-sun">☀️</span>
             <span class="icon-moon">🌙</span>
           </button>
 
+          <a href="mailto:mobileapps.avineet@gmail.com" class="btn btn-primary btn-sm">Email</a>
         </div>
-      </div>
-
-      <p>A portfolio of mobile apps and games covering design, development, and release.</p>
+      </nav>
     </header>
 
+    <main>
 
-    <!--
-      PROJECTS
-    -->
-    <div id="projects-root"></div>
+      <!-- HERO -->
+      <section class="wrap hero">
+        <div class="hero-copy">
+          <h1>A portfolio of mobile apps and games covering design, development, and release.</h1>
 
-    <!--
-      CONTACT
-      Make it easy for someone to reach you.
-      This is the most important section for opportunities.
-    -->
-    <footer id="connect">
-      <p>
-        Interested in working together?
-        <br />
-        Email: <a href="mailto:mobileapps.avineet@gmail.com">mobileapps.avineet@gmail.com</a>
-        <br />
-        GitHub: <a href="https://github.com/avineetgupta">github.com/avineetgupta</a>
-        · LinkedIn: <a href="https://linkedin.com/in/avineetgupta">linkedin.com/in/avineetgupta</a>
-      </p>
+          <div class="hero-actions">
+            <a href="#apps" class="btn btn-primary">
+              Browse the apps
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+            <a href="mailto:mobileapps.avineet@gmail.com" class="btn">Get in touch</a>
+          </div>
+        </div>
+
+        <!-- Filled by projects.js -->
+        <aside class="shelf glass" id="shelf-root"></aside>
+      </section>
+
+      <!-- STATS -->
+      <section class="wrap">
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-value" id="stat-app-count">06</div>
+            <div class="stat-label">Apps live on the App Store</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value" id="stat-category-count">03</div>
+            <div class="stat-label" id="stat-category-label">Categories: games, health, focus</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">iOS</div>
+            <div class="stat-label">Platform</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">4.8</div>
+            <div class="stat-label">Average App Store rating</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SPOTLIGHT — filled by projects.js -->
+      <section class="wrap" id="spotlight-root"></section>
+
+      <!-- APPS -->
+      <section class="wrap" id="apps">
+        <div class="apps-head">
+          <div>
+            <span class="kicker">The portfolio</span>
+            <h2 class="section-title" id="apps-title">Six apps on the App Store</h2>
+          </div>
+        </div>
+
+        <!-- Filters + grid, filled by projects.js -->
+        <div id="projects-root"></div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="wrap">
+        <div class="contact glass glass-raised" id="contact">
+          <div class="contact-copy">
+            <h2>Interested in working together?</h2>
+          </div>
+
+          <div class="contact-links">
+            <a href="mailto:mobileapps.avineet@gmail.com" class="contact-link primary">
+              mobileapps.avineet@gmail.com
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+            <a href="https://github.com/avineetgupta" class="contact-link" target="_blank" rel="noopener">
+              github.com/avineetgupta
+              <span class="meta">GitHub</span>
+            </a>
+            <a href="https://linkedin.com/in/avineetgupta" class="contact-link" target="_blank" rel="noopener">
+              linkedin.com/in/avineetgupta
+              <span class="meta">LinkedIn</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <img src="/assets/SideQuest_logo_full_bold.png" alt="SideQuest Apps" />
+
+        <div class="footer-links">
+          <a href="#apps">Apps</a>
+          <a href="/privacy.html">Privacy policy</a>
+          <a href="mailto:mobileapps.avineet@gmail.com">Email</a>
+        </div>
+
+        <p class="copyright">© <span id="year">2026</span> SideQuest Apps · Built by Avineet Gupta</p>
+      </div>
     </footer>
-  </main>
+
+  </div>
 </body>
+
 </html>

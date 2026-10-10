@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Privacy Policy – SideQuest Apps</title>
+  <title>Privacy Policy — SideQuest Apps</title>
+  <meta name="description" content="How SideQuest Apps collects, uses and protects your information." />
 
   <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
@@ -15,89 +17,253 @@
 
   <!-- Android / PWA -->
   <link rel="manifest" href="/assets/favicon/site.webmanifest">
-  <meta name="theme-color" content="#0f172a">
+  <meta name="theme-color" content="#0a0a0c">
+
+  <!-- Type -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+  >
 
   <link rel="stylesheet" href="/styles.css" />
+
+  <script src="/theme.js" defer></script>
 </head>
 
-<script src="/theme.js" defer></script>
-
 <body>
-  <main class="container">
-    <header class="header">
-      <div class="header-top">
-        <h1 class="site-title">
-          <a href="/" aria-label="SideQuest Apps">
-            <img
-              src="/assets/SideQuest_logo_full.png"
-              alt="SideQuest Apps"
-              class="site-logo"
-            />
-          </a>
-        </h1>
-        <a href="/" class="header-link">Back</a>
-      </div>
+  <!--
+    BACKDROP
+    Same colour fields as the home page, so the glass has something to refract.
+  -->
+  <div class="backdrop" aria-hidden="true">
+    <span class="field field-1"></span>
+    <span class="field field-2"></span>
+    <span class="field field-3"></span>
+    <span class="grid-overlay"></span>
+  </div>
+
+  <div class="shell">
+
+    <!-- NAV — identical to the home page -->
+    <header class="site-header" id="top">
+      <nav class="nav glass">
+        <a href="/" aria-label="SideQuest Apps home">
+          <img src="/assets/SideQuest_logo_full_bold.png" alt="SideQuest Apps" class="site-logo" />
+        </a>
+
+        <div class="nav-links">
+          <a href="/#apps" class="nav-link">Apps</a>
+          <a href="/#contact" class="nav-link">Contact</a>
+          <a href="/privacy.html" class="nav-link">Privacy</a>
+
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle colour theme">
+            <span class="icon-sun">☀️</span>
+            <span class="icon-moon">🌙</span>
+          </button>
+
+          <a href="mailto:mobileapps.avineet@gmail.com" class="btn btn-primary btn-sm">Email</a>
+        </div>
+      </nav>
     </header>
 
-    <section>
-        <h2>Privacy Policy</h2>
-        
-        <h3>
-        Effective Date: December 23, 2025
-        </h3>
+    <main>
 
-        <p>
-        At SideQuest Apps, protecting your privacy is a top priority. 
-        We are committed to handling any personal data collected with care and transparency. This policy explains how we collect, use, and protect your information.
+      <!-- HERO -->
+      <section class="wrap hero">
+        <div class="hero-copy">
+          <h1>Your data,<br />handled plainly.</h1>
+
+          <p class="lede">
+            Protecting your privacy is a top priority. This policy explains what SideQuest Apps
+            collects, how it is used, and the control you keep over it — in the shortest form that
+            still says everything.
+          </p>
+
+          <span class="meta-chip">
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <rect x="2.25" y="3.25" width="11.5" height="10.5" rx="2" stroke="currentColor" stroke-width="1.4" />
+              <path d="M2.5 6.5h11M5.5 2v2.5M10.5 2v2.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+            </svg>
+            Effective 23 December 2025
+          </span>
+        </div>
+
+        <!-- At a glance — the privacy counterpart to the home page's app shelf -->
+        <aside class="shelf glass">
+          <div class="shelf-head">
+            <h2>At a glance</h2>
+            <span class="shelf-count">4 promises</span>
+          </div>
+
+          <div class="shelf-row">
+            <span class="glance-icon">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+            <div class="shelf-text"><div class="glance-text">Your data is never sold</div></div>
+          </div>
+
+          <div class="shelf-row">
+            <span class="glance-icon">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+            <div class="shelf-text"><div class="glance-text">Diagnostics only, and anonymous</div></div>
+          </div>
+
+          <div class="shelf-row">
+            <span class="glance-icon">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+            <div class="shelf-text"><div class="glance-text">Opt out wherever settings allow</div></div>
+          </div>
+
+          <div class="shelf-row">
+            <span class="glance-icon">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+            <div class="shelf-text"><div class="glance-text">Deletion on request, any time</div></div>
+          </div>
+
+          <a href="#policy" class="shelf-more">Read the full policy</a>
+        </aside>
+      </section>
+
+      <!-- POLICY -->
+      <section class="wrap" id="policy">
+        <span class="kicker">The detail</span>
+        <h2 class="section-title">What we collect, and what we do with it</h2>
+
+        <div class="policy-grid">
+          <article class="step glass">
+            <div class="step-no">01</div>
+            <h3>What information we collect</h3>
+            <p>
+              We may collect non-personal information, such as device type, operating system, crash
+              logs, performance diagnostics, and anonymous usage statistics.
+            </p>
+            <p>
+              No personal or sensitive data — names, email addresses, contact details — is collected
+              unless you provide it directly for support or feedback.
+            </p>
+          </article>
+
+          <article class="step glass">
+            <div class="step-no">02</div>
+            <h3>How we use your data</h3>
+            <p>
+              The information collected is used solely to analyse app performance, troubleshoot
+              issues, and refine the user experience.
+            </p>
+            <p>
+              The goal is simple: make the apps faster, steadier and more reliable for everyone
+              using them.
+            </p>
+          </article>
+
+          <article class="step glass">
+            <div class="step-no">03</div>
+            <h3>Data sharing &amp; sales</h3>
+            <p>
+              We do not sell your information to anyone. Data collected is never shared with third
+              parties except as required for technical support or necessary app functionality
+              (e.g. analytics services) — and only under strict confidentiality agreements.
+            </p>
+          </article>
+
+          <article class="step glass">
+            <div class="step-no">04</div>
+            <h3>Your choices &amp; rights</h3>
+            <p>
+              You may opt out of diagnostics or analytics wherever settings permit.
+            </p>
+            <p>
+              If you have provided personal information for support, you have full rights to
+              request deletion of that data at any time.
+            </p>
+          </article>
+
+          <article class="step glass">
+            <div class="step-no">05</div>
+            <h3>Policy updates</h3>
+            <p>
+              We may update this privacy policy periodically. Updates will be posted within the
+              app and on our website, with version date revisions.
+            </p>
+          </article>
+
+          <article class="step glass">
+            <div class="step-no">06</div>
+            <h3>Who this covers</h3>
+            <p>
+              This policy applies to every SideQuest Apps release on the App Store —
+              <a href="/#apps">all of them</a> — and to this website.
+            </p>
+          </article>
+        </div>
+
+        <p class="policy-note">
+          This page is a plain-language summary of how SideQuest Apps handles data. If anything here
+          is unclear, ask — a privacy policy nobody can read is not much of a policy.
         </p>
+      </section>
 
-        <h3>
-        What Information We Collect:
-        </h3>
+      <!-- CONTACT -->
+      <section class="wrap">
+        <div class="contact glass glass-raised" id="contact">
+          <div class="contact-copy">
+            <h2>Questions about your data?</h2>
+            <p class="lede">
+              Ask directly and you will get a straight answer — including a deletion request, if
+              that is what you need.
+            </p>
+          </div>
 
-        <p>
-        We may collect non-personal information, such as device type, operating system, crash logs, performance diagnostics, and anonymous usage statistics. This data helps us improve app stability, optimize features, and enhance overall user experience. No personal or sensitive data (like names, email addresses, or contact details) is collected unless directly provided for support or feedback.
-        </p>
-
-        <h3>
-        How We Use Your Data:
-        </h3>
-        
-        <p>
-        The information collected is solely used to analyze app performance, troubleshoot issues, and refine user experience. Our goal is to make our apps smarter, faster, and more reliable for everyone.
-        </p>
-
-        <h3>
-        Data Sharing & Sales:
-        </h3>
-
-        <p>
-        We do not sell your information to anyone. Data collected is never shared with third parties except as required for technical support or necessary app functionality (e.g., analytics services)—and only under strict confidentiality agreements.
-        </p>
-
-        <h3>
-        Your Choices & Rights:
-        </h3>
-
-        <p>
-        You may opt out of diagnostics or analytics where settings permit. If you provide personal information for support, you have full rights to request deletion of your data at any time.
-        </p>
-
-        <h3>
-        Policy Updates:
-        </h3>
-
-        <p>
-        We may update this privacy policy periodically. Updates will be posted within the app and on our website, with version date revisions.
-        </p>
-
-        <p>
-        If you have questions, contact:
-            <a href="mailto:mobileapps.avineet@gmail.com">
-            mobileapps.avineet@gmail.com
+          <div class="contact-links">
+            <a href="mailto:mobileapps.avineet@gmail.com" class="contact-link primary">
+              mobileapps.avineet@gmail.com
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
             </a>
-        </p>
-    </section>
-  </main>
+            <a href="/" class="contact-link">
+              Back to the apps
+              <span class="meta">Home</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <img src="/assets/SideQuest_logo_full_bold.png" alt="SideQuest Apps" />
+
+        <div class="footer-links">
+          <a href="/#apps">Apps</a>
+          <a href="/privacy.html">Privacy policy</a>
+          <a href="mailto:mobileapps.avineet@gmail.com">Email</a>
+        </div>
+
+        <p class="copyright">© <span id="year">2026</span> SideQuest Apps · Built by Avineet Gupta</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <script defer>
+    const y = document.getElementById("year");
+    if (y) y.textContent = new Date().getFullYear();
+  </script>
 </body>
+
 </html>
