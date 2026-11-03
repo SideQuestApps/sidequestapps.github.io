@@ -30,6 +30,14 @@ class SiteRenderer {
       ],
     },
     {
+      name: "ID Photo Booth",
+      description:
+        "Make a passport, visa or ID photo for any country in about a minute, right on your iPhone. Exact sizes, a plain background, and your photos stay on your phone.",
+      link: "https://apps.apple.com/us/app/id6829430828",
+      icon: "/assets/icons/photo_booth_logo.png",
+      category: "Productivity",
+    },
+    {
       name: "Workout Planner",
       description:
         "Workout Planner: Gym Routine makes it easy to plan your workouts, follow a weekly routine, and stay consistent without feeling overwhelmed.",
