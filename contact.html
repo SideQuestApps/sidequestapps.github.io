@@ -27,7 +27,7 @@
     href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
   >
 
-  <link rel="stylesheet" href="/styles.css?v=3" />
+  <link rel="stylesheet" href="/styles.css?v=5" />
 
   <script src="/theme.js?v=2" defer></script>
   <script src="/footer.js?v=2" defer></script>
@@ -51,19 +51,23 @@
           <img src="/assets/SideQuest_logo_full_bold.png" alt="SideQuest Apps" class="site-logo" />
         </a>
 
-        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
-          <span class="bar"></span><span class="bar"></span>
-        </button>
 
         <div class="nav-links" id="nav-links">
           <a href="/#apps" class="nav-link">Apps</a>
           <a href="/blog.html" class="nav-link">Blog</a>
           <a href="/contact.html" class="nav-link" aria-current="page">Contact</a>
           <a href="/privacy.html" class="nav-link">Privacy</a>
+        </div>
 
+        <div class="nav-actions">
           <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle colour theme">
-            <span class="icon-sun">☀️</span>
-            <span class="icon-moon">🌙</span>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8V16Z" />
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM12 4V8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16V20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4Z" />
+            </svg>
+          </button>
+          <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+            <span class="bar"></span><span class="bar"></span>
           </button>
         </div>
       </nav>

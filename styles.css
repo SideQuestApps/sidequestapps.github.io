@@ -267,6 +267,14 @@ section {
   align-items: center;
   gap: 4px;
   flex-wrap: wrap;
+  margin-left: auto;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 8px;
 }
 
 .nav-link {
@@ -330,7 +338,13 @@ section {
     display: inline-flex;
   }
 
+  .nav-actions {
+    margin-left: auto;
+  }
+
   .nav-links {
+    order: 3;
+    margin-left: 0;
     display: none;
     flex: 1 1 100%;
     flex-direction: column;
@@ -347,11 +361,6 @@ section {
   .nav-links .nav-link {
     padding: 14px 16px;
     font-size: 16px;
-  }
-
-  .nav-links .theme-toggle {
-    align-self: flex-start;
-    margin: 6px 0 0 4px;
   }
 
   .nav-links .btn {
@@ -431,17 +440,13 @@ section {
   border-color: var(--glass-line-raised);
 }
 
-.icon-sun,
-.icon-moon {
-  display: none;
+.theme-toggle svg {
+  transition: transform 0.3s ease;
 }
 
-[data-theme="dark"] .icon-sun {
-  display: inline;
-}
-
-[data-theme="light"] .icon-moon {
-  display: inline;
+/* Flip the half-filled disc so the icon hints at the current theme */
+[data-theme="light"] .theme-toggle svg {
+  transform: scaleX(-1);
 }
 
 /* =========================================================
