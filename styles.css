@@ -1374,13 +1374,6 @@ section.contact-page {
   padding-top: 40px;
 }
 
-.contact-page-links {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  max-width: 560px;
-}
-
 /* Contact form */
 .form-card {
   max-width: 760px;
@@ -1477,10 +1470,6 @@ section.contact-page {
 
 .form-status[data-kind="error"] {
   color: var(--accent);
-}
-
-.other-title {
-  margin-bottom: 18px;
 }
 
 /* Empty state */
