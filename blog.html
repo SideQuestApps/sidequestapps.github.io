@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog — SideQuest Apps</title>
+  <meta
+    name="description"
+    content="Writing on building and shipping iOS apps and games, by Avineet Gupta. Posts are published on Medium."
+  />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="icon" href="/assets/favicon/favicon.ico">
+
+  <!-- Apple -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+
+  <!-- Android / PWA -->
+  <link rel="manifest" href="/assets/favicon/site.webmanifest">
+  <meta name="theme-color" content="#0a0a0c">
+
+  <!-- Type -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+  >
+
+  <link rel="stylesheet" href="/styles.css" />
+
+  <script src="/theme.js" defer></script>
+  <script src="/blog.js" defer></script>
+</head>
+
+<body>
+  <div class="backdrop" aria-hidden="true">
+    <span class="field field-1"></span>
+    <span class="field field-2"></span>
+    <span class="field field-3"></span>
+    <span class="grid-overlay"></span>
+  </div>
+
+  <div class="shell">
+
+    <!-- NAV -->
+    <header class="site-header" id="top">
+      <nav class="nav glass">
+        <a href="/" aria-label="SideQuest Apps home">
+          <img src="/assets/SideQuest_logo_full_bold.png" alt="SideQuest Apps" class="site-logo" />
+        </a>
+
+        <div class="nav-links">
+          <a href="/#apps" class="nav-link">Apps</a>
+          <a href="/blog.html" class="nav-link" aria-current="page">Blog</a>
+          <a href="/#contact" class="nav-link">Contact</a>
+          <a href="/privacy.html" class="nav-link">Privacy</a>
+
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle colour theme">
+            <span class="icon-sun">☀️</span>
+            <span class="icon-moon">🌙</span>
+          </button>
+
+          <a href="mailto:mobileapps.avineet@gmail.com" class="btn btn-primary btn-sm">Email</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+
+      <!-- INTRO -->
+      <section class="wrap blog-intro">
+        <div class="blog-intro-copy">
+          <span class="kicker">Blog</span>
+          <h1>Notes from building and shipping apps.</h1>
+          <p class="lede">
+            What I learn while designing, building and releasing iOS apps and games, written up as I go.
+            Every post is published on Medium, and the previews below link straight to it.
+          </p>
+          <div class="hero-actions">
+            <a href="#" class="btn btn-primary" data-medium-link target="_blank" rel="noopener">
+              Follow on Medium
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M4 12L12 4M6 4h6v6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+            <a href="/#apps" class="btn">See the apps</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- POSTS — filled by blog.js -->
+      <section class="wrap" id="posts">
+        <div class="posts-head">
+          <h2 class="posts-title">Writing</h2>
+          <span class="posts-count" id="post-count"></span>
+        </div>
+        <div id="posts-root"></div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <img src="/assets/SideQuest_logo_full_bold.png" alt="SideQuest Apps" />
+
+        <div class="footer-links">
+          <a href="/#apps">Apps</a>
+          <a href="/blog.html">Blog</a>
+          <a href="/privacy.html">Privacy policy</a>
+          <a href="mailto:mobileapps.avineet@gmail.com">Email</a>
+        </div>
+
+        <p class="copyright">© <span id="year">2026</span> SideQuest Apps · Built by Avineet Gupta</p>
+      </div>
+    </footer>
+
+  </div>
+</body>
+
+</html>
