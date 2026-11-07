@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — SideQuest Apps</title>
+  <meta name="description" content="Get in touch with Avineet Gupta about working together, or about any of the SideQuest apps." />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="icon" href="/assets/favicon/favicon.ico">
+
+  <!-- Apple -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+
+  <!-- Android / PWA -->
+  <link rel="manifest" href="/assets/favicon/site.webmanifest">
+  <meta name="theme-color" content="#0a0a0c">
+
+  <!-- Type -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+  >
+
+  <link rel="stylesheet" href="/styles.css?v=2" />
+
+  <script src="/theme.js?v=2" defer></script>
+  <script src="/contact.js" defer></script>
+</head>
+
+<body>
+  <div class="backdrop" aria-hidden="true">
+    <span class="field field-1"></span>
+    <span class="field field-2"></span>
+    <span class="field field-3"></span>
+    <span class="grid-overlay"></span>
+  </div>
+
+  <div class="shell">
+
+    <!-- NAV -->
+    <header class="site-header" id="top">
+      <nav class="nav glass">
+        <a href="/" aria-label="SideQuest Apps home">
+          <img src="/assets/SideQuest_logo_full_bold.png" alt="SideQuest Apps" class="site-logo" />
+        </a>
+
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <span class="bar"></span><span class="bar"></span>
+        </button>
+
+        <div class="nav-links" id="nav-links">
+          <a href="/#apps" class="nav-link">Apps</a>
+          <a href="/blog.html" class="nav-link">Blog</a>
+          <a href="/contact.html" class="nav-link" aria-current="page">Contact</a>
+          <a href="/privacy.html" class="nav-link">Privacy</a>
+
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle colour theme">
+            <span class="icon-sun">☀️</span>
+            <span class="icon-moon">🌙</span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+
+      <section class="wrap blog-intro">
+        <div class="blog-intro-copy">
+          <span class="kicker">Contact</span>
+          <h1>Interested in working together?</h1>
+          <p class="lede">
+            Tell me a bit about what you have in mind, or ask about one of the apps. I'll reply by email.
+          </p>
+        </div>
+      </section>
+
+      <!-- FORM — handled by contact.js -->
+      <section class="wrap contact-page">
+        <div class="form-card glass glass-raised">
+          <form id="contact-form" novalidate>
+            <div class="form-grid">
+              <div class="field-group">
+                <label for="cf-name">Name</label>
+                <input id="cf-name" name="name" type="text" autocomplete="name" required />
+              </div>
+              <div class="field-group">
+                <label for="cf-mobile">Mobile <span class="optional">optional</span></label>
+                <input id="cf-mobile" name="mobile" type="tel" autocomplete="tel" inputmode="tel" />
+              </div>
+              <div class="field-group">
+                <label for="cf-email">Email</label>
+                <input id="cf-email" name="email" type="email" autocomplete="email" required />
+              </div>
+              <div class="field-group">
+                <label for="cf-subject">Subject</label>
+                <input id="cf-subject" name="subject" type="text" required />
+              </div>
+              <div class="field-group full">
+                <label for="cf-message">Message</label>
+                <textarea id="cf-message" name="message" rows="6" required></textarea>
+              </div>
+            </div>
+
+            <!-- Spam trap: real visitors never see or fill this -->
+            <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary" id="cf-send">Send message</button>
+              <p class="form-status" id="cf-status" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- OTHER WAYS -->
+      <section class="wrap contact-page">
+        <h2 class="posts-title other-title">Other ways to reach me</h2>
+        <div class="contact-page-links">
+          <a href="mailto:mobileapps.avineet@gmail.com" class="contact-link primary">
+            mobileapps.avineet@gmail.com
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+          <a href="https://github.com/avineetgupta" class="contact-link" target="_blank" rel="noopener">
+            github.com/avineetgupta
+            <span class="meta">GitHub</span>
+          </a>
+          <a href="https://linkedin.com/in/avineetgupta" class="contact-link" target="_blank" rel="noopener">
+            linkedin.com/in/avineetgupta
+            <span class="meta">LinkedIn</span>
+          </a>
+          <a href="https://medium.com/@avineetgupta" class="contact-link" target="_blank" rel="noopener">
+            medium.com/@avineetgupta
+            <span class="meta">Medium</span>
+          </a>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <img src="/assets/SideQuest_logo_full_bold.png" alt="SideQuest Apps" />
+
+        <div class="footer-links">
+          <a href="/#apps">Apps</a>
+          <a href="/blog.html">Blog</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy policy</a>
+          <a href="mailto:mobileapps.avineet@gmail.com">Email</a>
+        </div>
+
+        <p class="copyright">© <span id="year">2026</span> SideQuest Apps · Built by Avineet Gupta</p>
+      </div>
+    </footer>
+
+  </div>
+</body>
+
+</html>

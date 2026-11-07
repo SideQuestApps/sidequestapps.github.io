@@ -30,9 +30,9 @@
     href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
   >
 
-  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/styles.css?v=2" />
 
-  <script src="/theme.js" defer></script>
+  <script src="/theme.js?v=2" defer></script>
   <script src="/projects.js" defer></script>
   <script defer>
     document.addEventListener("DOMContentLoaded", () => {
@@ -63,18 +63,20 @@
           <img src="/assets/SideQuest_logo_full_bold.png" alt="SideQuest Apps" class="site-logo" />
         </a>
 
-        <div class="nav-links">
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <span class="bar"></span><span class="bar"></span>
+        </button>
+
+        <div class="nav-links" id="nav-links">
           <a href="#apps" class="nav-link">Apps</a>
           <a href="/blog.html" class="nav-link">Blog</a>
-          <a href="#contact" class="nav-link">Contact</a>
+          <a href="/contact.html" class="nav-link">Contact</a>
           <a href="/privacy.html" class="nav-link">Privacy</a>
 
           <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle colour theme">
             <span class="icon-sun">☀️</span>
             <span class="icon-moon">🌙</span>
           </button>
-
-          <a href="mailto:mobileapps.avineet@gmail.com" class="btn btn-primary btn-sm">Email</a>
         </div>
       </nav>
     </header>
@@ -93,7 +95,7 @@
                 <path d="M3 8h10M9 4l4 4-4 4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </a>
-            <a href="mailto:mobileapps.avineet@gmail.com" class="btn">Get in touch</a>
+            <a href="/contact.html" class="btn">Get in touch</a>
           </div>
         </div>
 
@@ -139,32 +141,6 @@
         <div id="projects-root"></div>
       </section>
 
-      <!-- CONTACT -->
-      <section class="wrap">
-        <div class="contact glass glass-raised" id="contact">
-          <div class="contact-copy">
-            <h2>Interested in working together?</h2>
-          </div>
-
-          <div class="contact-links">
-            <a href="mailto:mobileapps.avineet@gmail.com" class="contact-link primary">
-              mobileapps.avineet@gmail.com
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </a>
-            <a href="https://github.com/avineetgupta" class="contact-link" target="_blank" rel="noopener">
-              github.com/avineetgupta
-              <span class="meta">GitHub</span>
-            </a>
-            <a href="https://linkedin.com/in/avineetgupta" class="contact-link" target="_blank" rel="noopener">
-              linkedin.com/in/avineetgupta
-              <span class="meta">LinkedIn</span>
-            </a>
-          </div>
-        </div>
-      </section>
-
     </main>
 
     <footer class="site-footer">
@@ -174,6 +150,7 @@
         <div class="footer-links">
           <a href="#apps">Apps</a>
           <a href="/blog.html">Blog</a>
+          <a href="/contact.html">Contact</a>
           <a href="/privacy.html">Privacy policy</a>
           <a href="mailto:mobileapps.avineet@gmail.com">Email</a>
         </div>

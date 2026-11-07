@@ -30,9 +30,9 @@
     href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
   >
 
-  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/styles.css?v=2" />
 
-  <script src="/theme.js" defer></script>
+  <script src="/theme.js?v=2" defer></script>
   <script src="/blog.js" defer></script>
 </head>
 
@@ -53,18 +53,20 @@
           <img src="/assets/SideQuest_logo_full_bold.png" alt="SideQuest Apps" class="site-logo" />
         </a>
 
-        <div class="nav-links">
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <span class="bar"></span><span class="bar"></span>
+        </button>
+
+        <div class="nav-links" id="nav-links">
           <a href="/#apps" class="nav-link">Apps</a>
           <a href="/blog.html" class="nav-link" aria-current="page">Blog</a>
-          <a href="/#contact" class="nav-link">Contact</a>
+          <a href="/contact.html" class="nav-link">Contact</a>
           <a href="/privacy.html" class="nav-link">Privacy</a>
 
           <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle colour theme">
             <span class="icon-sun">☀️</span>
             <span class="icon-moon">🌙</span>
           </button>
-
-          <a href="mailto:mobileapps.avineet@gmail.com" class="btn btn-primary btn-sm">Email</a>
         </div>
       </nav>
     </header>
@@ -110,6 +112,7 @@
         <div class="footer-links">
           <a href="/#apps">Apps</a>
           <a href="/blog.html">Blog</a>
+          <a href="/contact.html">Contact</a>
           <a href="/privacy.html">Privacy policy</a>
           <a href="mailto:mobileapps.avineet@gmail.com">Email</a>
         </div>
