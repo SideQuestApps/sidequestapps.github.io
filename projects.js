@@ -125,7 +125,6 @@ class SiteRenderer {
    */
   renderCounts() {
     const n = this.apps.length;
-    const cats = this.categories;
 
     const set = (id, text) => {
       const el = document.getElementById(id);
@@ -134,8 +133,6 @@ class SiteRenderer {
 
     set("apps-title", `${this.word(n)} app${n === 1 ? "" : "s"} on the App Store`);
     set("stat-app-count", String(n).padStart(2, "0"));
-    set("stat-category-count", String(cats.length).padStart(2, "0"));
-    set("stat-category-label", `Categories: ${cats.map((c) => c.toLowerCase()).join(", ")}`);
   }
 
   badge(app, height) {
