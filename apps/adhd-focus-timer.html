@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ADHD Focus Timer — Focus in short, doable bursts | SideQuest Apps</title>
+  <meta name="description" content="ADHD Focus Timer — Focus in short, doable bursts." />
+  <meta property="og:title" content="ADHD Focus Timer — Focus in short, doable bursts" />
+  <link rel="canonical" href="/apps/adhd-focus-timer.html" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="icon" href="/assets/favicon/favicon.ico">
+
+  <!-- Apple -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+
+  <!-- Android / PWA -->
+  <link rel="manifest" href="/assets/favicon/site.webmanifest">
+  <meta name="theme-color" content="#0a0a0c">
+
+  <!-- Type -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+  >
+
+  <link rel="stylesheet" href="/styles.css?v=7" />
+
+  <script src="/theme.js?v=2" defer></script>
+  <script src="/footer.js?v=2" defer></script>
+  <script src="/projects.js" defer></script>
+  <script src="/app-page.js" defer></script>
+</head>
+
+<body data-app="adhd-focus-timer">
+  <div class="backdrop" aria-hidden="true">
+    <span class="field field-1"></span>
+    <span class="field field-2"></span>
+    <span class="field field-3"></span>
+    <span class="grid-overlay"></span>
+  </div>
+
+  <div class="shell">
+
+    <!-- NAV -->
+    <header class="site-header" id="top">
+      <nav class="nav glass">
+        <a href="/" aria-label="SideQuest Apps home">
+          <img src="/assets/SideQuest_logo_full_bold.png" alt="SideQuest Apps" class="site-logo" />
+        </a>
+
+
+        <div class="nav-links" id="nav-links">
+          <a href="/#apps" class="nav-link" aria-current="page">Apps</a>
+          <a href="/blog.html" class="nav-link">Blog</a>
+          <a href="/contact.html" class="nav-link">Contact</a>
+          <a href="/privacy.html" class="nav-link">Privacy</a>
+        </div>
+
+        <div class="nav-actions">
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle colour theme">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8V16Z" />
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM12 4V8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16V20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4Z" />
+            </svg>
+          </button>
+          <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+            <span class="bar"></span><span class="bar"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="app-root"></main>
+
+    <footer class="site-footer" id="site-footer"></footer>
+
+  </div>
+</body>
+
+</html>
