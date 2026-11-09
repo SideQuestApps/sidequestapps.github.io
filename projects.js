@@ -94,9 +94,9 @@ class SiteRenderer {
       category: "Health",
       slug: "workout-planner",
       screenshots: [
-        { src: "/assets/screenshots/workout-planner-1.jpg", alt: "Workout Planner app screenshot 1" },
-        { src: "/assets/screenshots/workout-planner-2.jpg", alt: "Workout Planner app screenshot 2" },
-        { src: "/assets/screenshots/workout-planner-3.jpg", alt: "Workout Planner app screenshot 3" },
+        { src: "/assets/screenshots/workout-planner-1.png", alt: "Workout Planner app screenshot 1" },
+        { src: "/assets/screenshots/workout-planner-2.png", alt: "Workout Planner app screenshot 2" },
+        { src: "/assets/screenshots/workout-planner-3.png", alt: "Workout Planner app screenshot 3" },
       ],
       tagline: "Plan it. Follow it. Stay consistent.",
       features: [
