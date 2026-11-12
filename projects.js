@@ -51,6 +51,27 @@ class SiteRenderer {
       ],
     },
     {
+      name: "Dayspan",
+      description:
+        "Dayspan answers every date question in a tap. Type it the way you would say it: \"days until Dec 25\", \"90 days from today\" or \"business days between two dates\".",
+      link: "https://apps.apple.com/us/app/date-calculator-dayspan/id6833092347",
+      icon: "/assets/icons/dayspan.jpg",
+      category: "Utilities",
+      slug: "dayspan",
+      screenshots: [
+        { src: "/assets/screenshots/dayspan-1.png", alt: "Dayspan calculator showing 44 days until Dec 25, typed in plain language" },
+        { src: "/assets/screenshots/dayspan-2.png", alt: "Dayspan date detail for a birthday — age in years, months, days, weeks, hours and seconds" },
+        { src: "/assets/screenshots/dayspan-3.png", alt: "Dayspan home screen widgets counting down to birthdays, anniversaries and trips" },
+      ],
+      tagline: "Any date. Answered in a tap.",
+      features: [
+        { title: "Type it your way", text: "Write \"days until Dec 25\" or \"90 days from today\" and get the answer instantly." },
+        { title: "Business days too", text: "Count working days between two dates, with the option to include the end date." },
+        { title: "Every unit on one screen", text: "See any span in days, weeks, months, hours and even seconds." },
+        { title: "Always in view", text: "Home screen and lock screen widgets keep birthdays, anniversaries and trips counting down." },
+      ],
+    },
+    {
       name: "ID Photo Booth",
       description:
         "Make a passport, visa or ID photo for any country in about a minute, right on your iPhone. Exact sizes, a plain background, and your photos stay on your phone.",
